@@ -1,0 +1,103 @@
+.testimonials { background: #fff; }
+
+.slider {
+  max-width: 820px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--light);
+  border: 1px solid var(--line);
+}
+.track {
+  display: flex;
+  transition: transform 0.8s var(--ease);
+}
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  padding: 56px 56px 36px;
+  text-align: center;
+}
+.quote-mark {
+  position: absolute;
+  top: 28px;
+  left: 36px;
+  color: var(--primary);
+  opacity: 0.12;
+}
+.stars { display: flex; justify-content: center; gap: 4px; color: var(--accent); margin-bottom: 20px; }
+.slide blockquote {
+  font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 28px;
+}
+.slide figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+}
+.slide figcaption strong { display: block; color: var(--dark); line-height: 1.2; }
+.slide figcaption small { color: var(--muted); }
+.sample-chip {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #fff4d6;
+  color: #7a5200;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 0 30px;
+}
+.slider-controls > button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--dark);
+  transition: all 0.3s var(--ease);
+}
+.slider-controls > button:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  transform: scale(1.08);
+}
+.dots { display: flex; gap: 8px; }
+.dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #c8d3e3;
+  transition: width 0.4s var(--ease), background 0.3s;
+}
+.dots button.active { width: 30px; background: var(--primary); }
+
+@media (max-width: 600px) {
+  .slide { padding: 52px 24px 28px; }
+}

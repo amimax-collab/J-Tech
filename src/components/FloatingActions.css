@@ -1,0 +1,80 @@
+.floating {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.to-top {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--dark);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(10, 22, 40, 0.3);
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), background 0.25s;
+}
+.to-top.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.to-top:hover { background: var(--primary); transform: translateY(-3px); }
+
+.wa-float {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+  transition: transform 0.3s var(--ease);
+}
+.wa-float:hover { transform: scale(1.1) rotate(-6deg); }
+.wa-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  z-index: -1;
+  animation: ring 2.4s ease-out infinite;
+}
+@keyframes ring {
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+.wa-tip {
+  position: absolute;
+  right: 74px;
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--dark);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.wa-float:hover .wa-tip { opacity: 1; transform: none; }
+
+@media (max-width: 700px) {
+  .wa-tip { display: none; }
+  .floating { right: 14px; bottom: 14px; }
+}
