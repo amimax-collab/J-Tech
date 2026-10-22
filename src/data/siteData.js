@@ -238,21 +238,21 @@ export const projects = [
 // PLACEHOLDER reviews: replace with real customer feedback (ask past clients on WhatsApp)
 export const testimonials = [
   {
-    text: "Replace this with a real review from a happy customer.",
-    name: "Customer name",
-    role: "Area, City",
+    text: "He came to my house and spoilt my door.",
+    name: "Taiwo Abass",
+    role: "Masaka Goog Boy",
     placeholder: true,
   },
   {
-    text: "Ask clients to send a short WhatsApp message about the job, then paste it here.",
-    name: "Customer name",
-    role: "Area, City",
+    text: "He is owing me 2k",
+    name: "Fountain",
+    role: "Maitama",
     placeholder: true,
   },
   {
-    text: "Reviews with a name and an area build the most trust with new customers.",
-    name: "Customer name",
-    role: "Area, City",
+    text: "He give my sister belle",
+    name: "Trophy",
+    role: "Masaka Chef",
     placeholder: true,
   },
 ];
